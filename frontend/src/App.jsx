@@ -3,10 +3,12 @@ import { Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import Home from './pages/Home/Home';
 import Cart from './pages/Cart/Cart'; // Import the Cart component
-import PlaceHolder from './pages/PlaceHolder/PlaceHolder'; // Import the PlaceHolder component
+import PlaceHolder from './pages/PlaceOrder/PlaceOrder'; // Import the PlaceHolder component
+import Footer from './components/Footer/Footer';
 
 const App = () => {
   return (
+    <>
     <div className="app">
       <Navbar />
       <Routes>
@@ -15,6 +17,8 @@ const App = () => {
         <Route path='/order' element={<PlaceHolder />} />
       </Routes>
     </div>
+    <Footer/>
+    </>
   );
 };
 
